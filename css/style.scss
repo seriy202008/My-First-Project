@@ -1,0 +1,164 @@
+
+@import "scss/reset.scss";
+@import "scss/sourse.scss";
+
+html{
+    font-size: 100px;
+}
+
+body{
+    background-color: #e8e8e8;
+    padding: 50px;
+
+    line-height: 0.4rem;
+    color: $color_1;
+}
+.container{
+    width: 1190px;
+    height: 300%;
+    margin: 10px auto;
+
+    position: relative;
+    z-index: -2;
+    &::after{
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1064px;
+        background: url(..//img/fone.png) 0 0 no-repeat;
+        opacity: 0.2;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.contant{
+    width: 70%;
+    margin: 0 auto;
+}
+.logo{
+    opacity: 0.6;
+    font: {
+        family: Arial;
+        size: 0.14rem;
+    }
+    text: {
+        transform: uppercase;
+        align: center;
+    }
+    letter-spacing: 0.2em;
+    margin-top: 10px;
+}
+.title{
+    font: {
+        family: "Times New Roman";
+        size: 0.36rem;
+    }
+    line-height: 0.5rem;
+    text-align: center;
+}
+img{
+    width: 95%;
+    box-shadow: 0 0 0 10px #fff;
+    margin: 70px auto 90px;
+}
+.text{
+    font: {
+        family: 'Times New Roman';
+        size: 0.24rem;
+    }
+    opacity: 0.8;
+    margin-bottom: 60px;
+}
+.list{
+    margin-bottom: 60px;
+    &__item{
+        font: {
+            family: Arial;
+            size: 0.2rem;
+        }
+        line-height: 0.36rem;
+
+        list-style-image: url(../img/li.png);
+        list-style-position: inside;
+        &:first-child{
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+        }
+        &:nth-child(2){
+            font-style: italic;
+            color: $color_2;
+        }
+        &:nth-last-child(2){
+            font-weight: bold;
+        }
+        &:last-child span{
+            text-decoration: line-through;
+            opacity: 0.3;
+        }
+    }
+}
+
+.btn{
+    font: {
+        family: Arial;
+        size: 0.14rem;
+    }
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+    text-align: left;
+
+    box-sizing: content-box;
+    display: block;
+    width: 1.4rem;
+    height: 0.15rem;
+    background-color: $color_2;
+    padding: 0.15rem 0.3rem;
+    border-radius:  0.225rem;
+    margin-bottom: 200px;
+
+    position: relative;
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 0.21rem;
+        height: 0.14rem;
+        opacity: 0.8;
+
+        background: url(../img/arrow.png) 0 0 / 0.21rem 0.14rem no-repeat;
+        position: absolute;
+        top: 0.15rem;
+        left: 1.5rem;
+    }
+    &:hover{
+        background-color: #3a5957;
+    }
+}
+
+@media (max-width: 992px) {
+    .contant{
+        width: 80%;
+    }
+    html{
+        font-size: 140px;
+    }
+}
+@media (max-width: 769px) {
+    .contant{
+        width: 90%;
+    }
+    html{
+        font-size: 180px;
+    }
+}
+@media (max-width: 576px) {
+    .contant{
+        width: 95%;
+    }
+    html{
+        font-size: 200px;
+    }
+}
